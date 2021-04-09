@@ -18,3 +18,7 @@ Digital Dispute Resolution System for Maritime Trade Powered by Chainlink Oracle
 - Dispute Resolution Reserve 
 - Flash Loans based on Dispute Resolution Reserve
 - Yield Farming from Dispute Resolution Reserve
+
+
+## References
+- https://billoflading.org/
