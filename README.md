@@ -1,5 +1,6 @@
 # RheaNet
-Digital Dispute Resolution System for Maritime Trade Powered by Chainlink Oracles
+- Rhea Resolution Reserve Protocol
+- Digital Dispute Resolution System for Maritime Trade Powered by Chainlink Oracles
 
 ## Tracks
 - ChainLink Oracles
