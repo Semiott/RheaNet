@@ -1,10 +1,8 @@
 pragma solidity ^0.6.6;
 
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
-//import "./KeeperCompatibleInterface.sol";
-//import "hardhat/console.sol";
 
-contract ResolutinClaimConsumer is ChainlinkClient {
+contract ResolutionClaimConsumer is ChainlinkClient {
     address private oracle;
     bytes32 private jobId;
     uint256 private fee;
