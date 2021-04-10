@@ -20,6 +20,33 @@
 - Flash Loans based on Dispute Resolution Reserve
 - Yield Farming from Dispute Resolution Reserve
 
+## Data Model
+
+### Resolution Claim 
+- Input
+
+### Resolution Reserve
+- Input
+
+### Goods NFT
+- Properties
+- Metadata
+
+### Bill of Lading NFT
+- Properties
+- Metadata
+
+### OpenLaw Agreements
+- Parties
+- 
+
+### Dispute Workflow
+- Task Name
+- Task Name
+
+### Flash Loans
+- 
+
 
 ## References
 - https://billoflading.org/
