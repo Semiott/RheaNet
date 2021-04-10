@@ -4,7 +4,7 @@ import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 //import "./KeeperCompatibleInterface.sol";
 //import "hardhat/console.sol";
 
-contract SeaWeatherConsumer is ChainlinkClient {
+contract ResolutinClaimConsumer is ChainlinkClient {
     address private oracle;
     bytes32 private jobId;
     uint256 private fee;
