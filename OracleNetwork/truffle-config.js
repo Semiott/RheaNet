@@ -1,60 +1,59 @@
-const wrapProvider = require('arb-ethers-web3-bridge').wrapProvider
-const HDWalletProvider = require('@truffle/hdwallet-provider')
+require('dotenv').config();
 
-const mnemonic ='jar deny prosper gasp flush glass core corn alarm treat leg smart'
-const arbProviderUrl = 'http://localhost:8547/'
+const HDWalletProvider = require('@truffle/hdwallet-provider');  // @notice - Should use new module.
+const mnemonic = process.env.MNEMONIC;
+
+/// Arbitrum testnet
+const wrapProvider = require('arb-ethers-web3-bridge').wrapProvider
+const arbProviderUrl = "https://kovan4.arbitrum.io/rpc"
+
 
 module.exports = {
   networks: {
-    development: {
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard BSC port (default: none)
-      network_id: "*",       // Any network (default: none)
-    },
-    arbitrum: {
+    arbitrum: {  /// [Note]: The definition of "arbitrum" should be outside of "networks"
       provider: function () {
+        // return wrapped provider:
         return wrapProvider(
           new HDWalletProvider(mnemonic, arbProviderUrl)
         )
       },
       network_id: '*',
       gasPrice: 0,
-      },
-     },
-    testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
-      network_id: 97,
-      confirmations: 10,
-      timeoutBlocks: 1000,
-      skipDryRun: true
+      from: process.env.DEPLOYER_ADDRESS  /// [Note]: Need to specify "from" address
+    },      
+    kovan: {
+      provider: () => new HDWalletProvider(mnemonic, 'https://kovan.infura.io/v3/' + process.env.INFURA_KEY),
+      network_id: '42',
+      gas: 6465030,
+      gasPrice: 5000000000, // 5 gwei
+      //gasPrice: 100000000000,  // 100 gwei
+      skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets)
     },
-    bsc: {
-      provider: () => new HDWalletProvider(mnemonic, `https://bsc-dataseed1.binance.org`),
-      network_id: 56,
-      confirmations: 10,
-      timeoutBlocks: 1000,
-      skipDryRun: true
+    local: {
+      host: '127.0.0.1',
+      port: 8545,
+      network_id: '*',
+      skipDryRun: true,
+      gasPrice: 5000000000
     },
+    test: {
+      host: '127.0.0.1',
+      port: 8545,
+      network_id: '*',
+      skipDryRun: true,
+      gasPrice: 5000000000
+    }
   },
 
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    timeout: 100000
-  },
-
-  // Configure your compilers
-  compilers: {	
-	  solc: {
-	    version: ">=0.6.0 <0.8.0"   // Fetch exact version from solc-bin (default: truffle's version)
-	    // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-	    // settings: {          // See the solidity docs for advice about optimization and evmVersion
-	    //  optimizer: {
-	    //    enabled: false,
-	    //    runs: 200
-	    //  },
-	    //  evmVersion: "byzantium"
-	    // }
-	    }
-	  }
-
+  compilers: {
+    solc: {
+      version: "pragma",  /// For compiling multiple solc-versions
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 200
+        }
+      }
+    }
   }
+}
