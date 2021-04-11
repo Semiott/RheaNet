@@ -49,6 +49,7 @@
 
 
 ## References
+- https://github.com/DAOfi/fungify_nft
 - https://github.com/mapachurro/OpenLease
 - https://github.com/openlawteam/OpenCourt
 - https://billoflading.org/
