@@ -2,11 +2,6 @@
 
 Send and get data from your IPFS node. 
 
-## TODO
-- Write tests
-- Make `text_for_file` more robust (not allow one without the other)
-- Any parameters can be passed instead of custom parameters
-
 ## Creating your own adapter from this template
 
 Clone this repo and change "ExternalAdapterProject" below to the name of your project
@@ -14,12 +9,7 @@ Clone this repo and change "ExternalAdapterProject" below to the name of your pr
 ```bash
 git clone https://github.com/PatrickAlphaC/ipfs_cl_ea
 ```
-
 Enter into the newly-created directory
-
-```bash
-cd ipfs_cl_ea
-```
 
 See [Install Locally](#install-locally) for a quickstart
 
