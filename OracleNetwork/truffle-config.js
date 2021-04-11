@@ -24,6 +24,13 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const wrapProvider = require('arb-ethers-web3-bridge').wrapProvider
+const HDWalletProvider = require('@truffle/hdwallet-provider')
+
+const mnemonic =
+  'jar deny prosper gasp flush glass core corn alarm treat leg smart'
+const arbProviderUrl = 'http://localhost:8547/'
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
