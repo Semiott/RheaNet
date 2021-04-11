@@ -53,3 +53,5 @@
 - https://github.com/mapachurro/OpenLease
 - https://github.com/openlawteam/OpenCourt
 - https://billoflading.org/
+- https://www.wired.com/1999/04/open-source-in-open-court/
+- https://media.consensys.net/opencourt-legally-enforceable-blockchain-based-arbitration-3d7147dbb56f
