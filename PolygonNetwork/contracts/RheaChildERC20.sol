@@ -1,7 +1,7 @@
 pragma solidity ^0.5.2;
 
 import './child/ChildERC20.sol';
-import "./ISapienParentToken.sol";
+import "./IRheaParentToken.sol";
 
 
 contract SapienChildERC20 is ChildERC20 {
