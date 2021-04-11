@@ -1,0 +1,29 @@
+{
+    "name": "maci-crypto",
+    "version": "0.3.2",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "watch": "tsc --watch",
+        "build": "tsc",
+        "test": "jest",
+        "test-crypto": "jest Crypto.test.ts",
+        "test-crypto-debug": "node --inspect-brk ./node_modules/.bin/jest Crypto.test.ts",
+        "test-quin-mt": "jest IncrementalQuinTree.test.ts",
+        "test-quin-mt-debug": "node --inspect-brk ./node_modules/.bin/jest IncrementalQuinTree.test.ts",
+        "test-mt": "jest IncrementalMerkleTree.test.ts",
+        "test-mt-debug": "node --inspect-brk ./node_modules/.bin/jest IncrementalMerkleTree.test.ts"
+    },
+    "dependencies": {
+        "circomlib": "https://github.com/iden3/circomlib.git#01da5f90dbbefeed5d78cec3b87303244338b920",
+        "ethers": "^4.0.45",
+        "ffjavascript": "0.1.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.25",
+        "@types/node": "^13.1.2",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.2.0"
+    },
+    "gitHead": "f567a17293114ba2d5e89c711d00a9f4c197f070"
+}

@@ -1,0 +1,9 @@
+CNAME
+docs_src/book/
+.etherlime-store
+**/build/
+circuits/build
+contracts/compiled
+node_modules
+blake2sdef.json
+build/.snark_checksum

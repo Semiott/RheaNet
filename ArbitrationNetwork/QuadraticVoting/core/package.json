@@ -1,0 +1,35 @@
+{
+    "name": "maci-core",
+    "version": "0.3.2",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "watch": "tsc --watch",
+        "build": "tsc",
+        "test-processMessage": "jest ProcessMessage.test.ts",
+        "test-processMessage-debug": "node --inspect-brk ./node_modules/.bin/jest ProcessMessage.test.ts",
+        "test-macistate": "jest MaciState.test.ts",
+        "test-macistate-debug": "node --inspect-brk ./node_modules/.bin/jest MaciState.test.ts",
+        "test-user": "jest User.test.ts",
+        "test-user-debug": "node --inspect-brk ./node_modules/.bin/jest User.test.ts",
+        "test": "jest",
+        "test-debug": "node --inspect-brk ./node_modules/.bin/jest"
+    },
+    "_moduleAliases": {
+        "@maci-contracts": "../contracts"
+    },
+    "dependencies": {
+        "ethers": "^4.0.45",
+        "maci-config": "^0.3.2",
+        "maci-crypto": "^0.3.2",
+        "maci-domainobjs": "^0.3.2",
+        "module-alias": "^2.2.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.25",
+        "@types/node": "^13.1.2",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.2.0"
+    },
+    "gitHead": "f567a17293114ba2d5e89c711d00a9f4c197f070"
+}

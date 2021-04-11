@@ -1,0 +1,54 @@
+{
+    "name": "maci-contracts",
+    "version": "0.3.2",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "watch": "tsc --watch",
+        "ganache": "./scripts/runGanache.sh",
+        "compileSol": "./scripts/compileSol.sh",
+        "build": "tsc",
+        "deploy": "node build/deploy.js -o deployedAddresses.json",
+        "deploy-debug": "node --inspect-brk build/deploy.js -o deployedAddresses.json",
+        "test-mt": "jest IncrementalMerkleTree.test.ts",
+        "test-mt-debug": "node --inspect-brk ./node_modules/.bin/jest IncrementalMerkleTree.test.ts",
+        "test-quin-mt": "jest IncrementalQuinTree.test.ts",
+        "test-quin-mt-debug": "node --inspect-brk ./node_modules/.bin/jest IncrementalQuinTree.test.ts",
+        "test-signUp": "NODE_OPTIONS=--max-old-space-size=4096 jest SignUp.test.ts",
+        "test-signUp-debug": "NODE_OPTIONS=--max-old-space-size=4096 node --inspect-brk ./node_modules/.bin/jest SignUp.test.ts",
+        "test-publishMessage": "jest PublishMessage.test.ts",
+        "test-publishMessage-debug": "node --inspect-brk ./node_modules/.bin/jest PublishMessage.test.ts",
+        "test-batchProcessMessageAndQuadVoteTally": "NODE_OPTIONS=--max-old-space-size=4096 node --stack-size=16384 ./node_modules/.bin/jest batchProcessMessageAndQuadVoteTally.test.ts",
+        "test-batchProcessMessageAndQuadVoteTally-debug": "NODE_OPTIONS=--max-old-space-size=4096 node --inspect-brk ./node_modules/.bin/jest batchProcessMessageAndQuadVoteTally.test.ts",
+        "test-hasher": "jest Hasher.test.ts",
+        "test-hasher-debug": "node --inspect-brk ./node_modules/.bin/jest Hasher.test.ts",
+        "test-verifyTally": "jest VerifyTally.test.ts",
+        "test-verifyTally-debug": "node --inspect-brk ./node_modules/.bin/jest VerifyTally.test.ts"
+    },
+    "_moduleAliases": {
+        "@maci-contracts": "."
+    },
+    "dependencies": {
+        "@openzeppelin/contracts": "^2.4.0",
+        "argparse": "^1.0.10",
+        "circomlib": "0.2.4",
+        "ethers": "^4.0.45",
+        "module-alias": "^2.2.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.25",
+        "@types/node": "^13.1.2",
+        "ganache-cli": "^6.7.0",
+        "jest": "^24.9.0",
+        "libsemaphore": "^1.0.5",
+        "maci-circuits": "^0.3.2",
+        "maci-config": "^0.3.2",
+        "maci-core": "^0.3.2",
+        "maci-crypto": "^0.3.2",
+        "maci-domainobjs": "^0.3.2",
+        "shelljs": "^0.8.4",
+        "truffle-artifactor": "^4.0.30",
+        "ts-jest": "^24.2.0"
+    },
+    "gitHead": "f567a17293114ba2d5e89c711d00a9f4c197f070"
+}

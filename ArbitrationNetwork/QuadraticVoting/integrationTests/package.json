@@ -1,0 +1,45 @@
+{
+    "name": "maci-integrationtests",
+    "version": "0.3.2",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "watch": "tsc --watch",
+        "build": "tsc",
+        "test": "jest",
+        "test-debug": "node --inspect-brk ./node_modules/.bin/jest",
+        "test-cli-create": "jest cli-create.test.ts",
+        "test-cli-create-debug": "node --inspect-brk ./node_modules/.bin/jest cli-create.test.ts",
+        "test-cli-signupAndPublish": "jest cli-signupAndPublish.test.ts",
+        "test-cli-signupAndPublish-debug": "node --inspect-brk ./node_modules/.bin/jest cli-signupAndPublish.test.ts",
+        "test-cli-processTallyVerify": "NODE_OPTIONS=--max-old-space-size=4096 jest cli-processTallyVerify.test.ts",
+        "test-cli-processTallyVerify-debug": "node --inspect-brk ./node_modules/.bin/jest cli-processTallyVerify.test.ts",
+        "test-cli-genMaciKeypair": "jest cli-genMaciKeypair.test.ts",
+        "test-cli-genMaciKeypair-debug": "node --inspect-brk ./node_modules/.bin/jest cli-genMaciKeypair.test.ts",
+        "test-cli-genMaciPubkey": "jest cli-genMaciPubkey.test.ts",
+        "test-cli-genMaciPubkey-debug": "node --inspect-brk ./node_modules/.bin/jest cli-genMaciPubkey.test.ts",
+        "test-suites": "NODE_OPTIONS=--max-old-space-size=4096 jest suites.test.ts",
+        "test-suites-debug": "NODE_OPTIONS=--max-old-space-size=4096 node --inspect-brk ./node_modules/.bin/jest suites.test.ts"
+    },
+    "_moduleAliases": {
+        "@maci-contracts": "../contracts/",
+        "@maci-integrationTests": "./"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.25",
+        "@types/node": "^13.1.2",
+        "ethers": "^4.0.45",
+        "jest": "^24.9.0",
+        "maci-circuits": "^0.3.2",
+        "maci-cli": "^0.3.2",
+        "maci-config": "^0.3.2",
+        "maci-contracts": "^0.3.2",
+        "maci-core": "^0.3.2",
+        "maci-crypto": "^0.3.2",
+        "maci-domainobjs": "^0.3.2",
+        "module-alias": "^2.2.2",
+        "shelljs": "^0.8.3",
+        "ts-jest": "^24.2.0"
+    },
+    "gitHead": "f567a17293114ba2d5e89c711d00a9f4c197f070"
+}
