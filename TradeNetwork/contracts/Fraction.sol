@@ -4,7 +4,6 @@ pragma solidity ^0.7.4;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
 import "./IFractional.sol";
 
 contract Fraction is IFractional, ERC20 {
