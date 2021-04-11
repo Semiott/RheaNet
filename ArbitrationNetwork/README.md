@@ -1,4 +1,4 @@
-# SuffrageNet
+# Arbitration Network with Anti Collusion and Anti Corruption 
 Computational Integrity Information Architecture for Electronic Voting using Zero Knowledge Proof Frameworks.
 
 ## Inspiration
