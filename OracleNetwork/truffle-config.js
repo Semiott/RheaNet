@@ -1,57 +1,47 @@
-const HDWalletProvider = require('@truffle/hdwallet-provider');  // @notice - Should use new module.
-const mnemonic = process.env.MNEMONIC;
-
-/// Arbitrum testnet
 const wrapProvider = require('arb-ethers-web3-bridge').wrapProvider
-const arbProviderUrl = "https://kovan4.arbitrum.io/rpc"
-
+const HDWalletProvider = require('@truffle/hdwallet-provider')
+const mnemonic =
+  'surge ability together fruit retire harvest release turkey social coffee owner uphold panel group car'
 
 module.exports = {
+  // See <http://truffleframework.com/docs/advanced/configuration>
+  // for more about customizing your Truffle configuration!
   networks: {
-    arbitrum: {  /// [Note]: The definition of "arbitrum" should be outside of "networks"
+    development: {
+      host: '127.0.0.1',
+      port: 7545,
+      network_id: '*', // Match any network id
+    },
+    arbitrum: {
       provider: function () {
-        // return wrapped provider:
         return wrapProvider(
-          new HDWalletProvider(mnemonic, arbProviderUrl)
+          new HDWalletProvider(mnemonic, 'http://127.0.0.1:8547/')
         )
       },
-      network_id: '*',
+      network_id: '*', // Match any network id
       gasPrice: 0,
-      from: process.env.DEPLOYER_ADDRESS  /// [Note]: Need to specify "from" address
-    },      
-    kovan: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://kovan.infura.io/v3/' + process.env.INFURA_KEY),
-      network_id: '42',
-      gas: 6465030,
-      gasPrice: 5000000000, // 5 gwei
-      //gasPrice: 100000000000,  // 100 gwei
-      skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets)
     },
-    local: {
-      host: '127.0.0.1',
-      port: 8545,
-      network_id: '*',
-      skipDryRun: true,
-      gasPrice: 5000000000
+    remote_arbitrum: {
+      provider: function () {
+        return wrapProvider(
+          new HDWalletProvider(mnemonic, 'https://kovan4.arbitrum.io/rpc')
+        )
+      },
+      network_id: '*', // Match any network id
+      gasPrice: 0,
     },
-    test: {
-      host: '127.0.0.1',
-      port: 8545,
-      network_id: '*',
-      skipDryRun: true,
-      gasPrice: 5000000000
-    }
   },
-
   compilers: {
     solc: {
-      version: "pragma",  /// For compiling multiple solc-versions
+      version: '^0.8', // Fetch exact version from solc-bin (default: truffle's version)
+      docker: true, // Use "0.5.3" you've installed locally with docker (default: false)
       settings: {
+        // See the solidity docs for advice about optimization and evmVersion
         optimizer: {
           enabled: true,
-          runs: 200
-        }
-      }
-    }
-  }
+          runs: 200,
+        },
+      },
+    },
+  },
 }
