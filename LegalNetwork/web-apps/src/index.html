@@ -1,0 +1,44 @@
+/**
+ * ES2015: import for bundlers like webpack
+ */
+
+// import both modules
+import { APIClient, Openlaw } from "openlaw";
+// OR import only `Openlaw`
+import { Openlaw } from "openlaw";
+// OR import only `APIClient`
+import { APIClient } from "openlaw";
+
+
+/**
+ * CommonJS
+ */
+
+// require() for Node.js (or bundlers that support CommonJS-style modules)
+const { APIClient, Openlaw } = require('openlaw');
+
+
+/**
+ * Browser: available as a browser global: `openlaw`
+ */
+
+<script src="https://unpkg.com/openlaw/dist/umd/openlaw.js"></script>
+
+<script>
+  const Openlaw = openlaw.Openlaw;
+  const APIClient = openlaw.APIClient;
+</script>
+
+
+/**
+ * Browser, with ES Modules (https://caniuse.com/#search=Modules)
+ */
+
+// in your app
+import { Openlaw, APIClient } from './path/to/openlaw/index.esm.js';
+
+// then, in your HTML
+<script type="module" src="./app.js"></script>
+
+
+
