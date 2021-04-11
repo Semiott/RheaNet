@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 
-contract ResolutionReserverConsumer is ChainlinkClient {
+contract DisputeNotificationConsumer is ChainlinkClient {
 
     event RequestAPIGet(address user, bytes32 indexed requestId);
     event APIGetIssued(bytes32 indexed requestId, uint256 maticPrice);
@@ -33,7 +33,7 @@ contract ResolutionReserverConsumer is ChainlinkClient {
      * Create a Chainlink request to retrieve API response, find the target
      * data, then multiply by 1000000000000000000 (to remove decimal places from data).
      */
-    function requestPriceData() public returns (bytes32 requestId) 
+    function requestDisputeData() public returns (bytes32 requestId) 
     {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
         
@@ -64,7 +64,7 @@ contract ResolutionReserverConsumer is ChainlinkClient {
     /**
      * Receive the response in the form of uint256
      */ 
-    function fulfill(bytes32 _requestId, uint256 _price) public recordChainlinkFulfillment(_requestId)
+    function broadcast(bytes32 _requestId, uint256 _price) public recordChainlinkFulfillment(_requestId)
     {
         price = _price;
         emit APIGetIssued(_requestId, _price);
