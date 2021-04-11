@@ -2,7 +2,7 @@ pragma solidity ^0.5.2;
 
 import "@openzeppelin/contracts/ownership/Ownable.sol";
 
-import "./ISapienParentToken.sol";
+import "./IRheaParentToken.sol";
 // demo token parent contract
 
 
