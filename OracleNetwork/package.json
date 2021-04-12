@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "arb-ethers-web3-bridge": "^0.7.3"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.2.6"
+  }
+}
