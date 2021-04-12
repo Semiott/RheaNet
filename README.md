@@ -50,6 +50,8 @@
 
 ## References
 - https://github.com/smartcontractkit/chainlink
+- https://blog.chain.link/chainlink-external-adapters-explained/
+- https://github.com/thodges-gh/CL-EA-Python-Template
 - https://github.com/DAOfi/fungify_nft
 - https://github.com/mapachurro/OpenLease
 - https://github.com/openlawteam/OpenCourt
