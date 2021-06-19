@@ -13,39 +13,19 @@
 - OpenLaw Protocol
 
 ## Concepts
-- ERC 1155 for Bill of Lading
-- ERC 721 for each of the goods
-- Fractionalising ERC 1155 based of delivery time and location
-- Dispute Resolution Reserve 
+- Resolution Reserve Tokens
+- Resolution Governance Tokens
+- Resolution Risk & Reward Tokens
+- Resolution Recurrence Tokens
+
+## Constructs
+- ERC 1155 for Resolution Reserve Tokens
+- ERC 721 for Resolution Reward Tokens
+- ERC 721 Fractionsl for Resolution Risk Tokens
+- Time Locks and Time Delays for Fractional NFT
+- Fractionalising Resolutions based on space and time
 - Flash Loans based on Dispute Resolution Reserve
 - Yield Farming from Dispute Resolution Reserve
-
-## Data Model
-
-### Resolution Claim 
-- Input
-
-### Resolution Reserve
-- Input
-
-### Goods NFT
-- Properties
-- Metadata
-
-### Bill of Lading NFT
-- Properties
-- Metadata
-
-### OpenLaw Agreements
-- Parties
-- 
-
-### Dispute Workflow
-- Task Name
-- Task Name
-
-### Flash Loans
-- 
 
 
 ## Reference Protocols
