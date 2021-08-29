@@ -1,6 +1,6 @@
 # RheaNet
-- Rhea Resolution Reserve Protocol
-- Digital Dispute Resolution System for Maritime Trade Powered by Chainlink Oracles
+- Recurrent Reflexive RealTime Resolution Protocol for Gigames in the Gig Economy
+- Digital Dispute Resolution System for Online Sports Sector Powered by Chainlink Oracles
 
 ## Tracks
 - ChainLink Oracles
