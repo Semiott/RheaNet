@@ -2,7 +2,10 @@
 - A Digital Dispute Resolution Framework for Online Sports Sector Powered by Ethereum Engineering Ecosystem.
 
 ## Inspiration
-- 
+- The Application Architecture of OpenLaw
+- The Rising Disputes in the world of sports
+- The powerful possibilites of Non Fungible Tokens
+- The powerful possibilities of Decentralised Autonomous Organisations
 
 ## What it does
 
