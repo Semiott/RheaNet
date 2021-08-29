@@ -46,6 +46,3 @@
 - https://www.wired.com/1999/04/open-source-in-open-court/
 - https://developer.offchainlabs.com/docs/contract_deployment
 - https://media.consensys.net/opencourt-legally-enforceable-blockchain-based-arbitration-3d7147dbb56f
-
-## Connected Context
-- https://www.cfr.org/backgrounder/how-are-trade-disputes-resolved
