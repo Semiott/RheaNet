@@ -1,6 +1,21 @@
 # RheaNet
-- Recurrent Reflexive RealTime Resolution Protocol for Gigames in the Gig Economy
-- Digital Dispute Resolution System for Online Sports Sector Powered by Ethereum Engineering Ecosystem.
+- A Digital Dispute Resolution Framework for Online Sports Sector Powered by Ethereum Engineering Ecosystem.
+
+## Inspiration
+- 
+
+## What it does
+
+## How we built it
+
+## Challenges we ran into
+
+## Accomplishments that we're proud of
+
+## What we learned
+
+## What's next for RheaNet
+
 
 ## Tracks
 - ChainLink Oracles
@@ -13,20 +28,18 @@
 - OpenLaw Protocol
 
 ## Concepts
-- Resolution Reserve Tokens
+- Recursive Resolution Tokens
 - Resolution Governance Tokens
 - Resolution Risk & Reward Tokens
-- Resolution Recurrence Tokens
+- Randomised Resolution Governance DAO
 
 ## Constructs
 - ERC 1155 for Resolution Reserve Tokens
 - ERC 721 for Resolution Reward Tokens
-- ERC 721 Fractionsl for Resolution Risk Tokens
+- ERC 721 Fractional NFT for Resolution Risk Tokens
 - Time Locks and Time Delays for Fractional NFT
 - Fractionalising Resolutions based on space and time
 - Flash Loans based on Dispute Resolution Reserve
-- Yield Farming from Dispute Resolution Reserve
-
 
 ## Reference Protocols
 - https://github.com/smartcontractkit/chainlink
