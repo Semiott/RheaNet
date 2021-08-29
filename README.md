@@ -1,6 +1,6 @@
 # RheaNet
 - Recurrent Reflexive RealTime Resolution Protocol for Gigames in the Gig Economy
-- Digital Dispute Resolution System for Online Sports Sector Powered by Chainlink Oracles
+- Digital Dispute Resolution System for Online Sports Sector Powered by Ethereum Engineering Ecosystem.
 
 ## Tracks
 - ChainLink Oracles
